@@ -1,0 +1,25 @@
+{
+  "name": "vipservice_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node bin/www"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PierreDunnAlive/vipservice_test.git"
+  },
+  "author": "iwan.ku96@yandex.ru",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PierreDunnAlive/vipservice_test/issues"
+  },
+  "homepage": "https://github.com/PierreDunnAlive/vipservice_test#readme"
+}
