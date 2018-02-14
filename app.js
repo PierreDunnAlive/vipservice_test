@@ -3,8 +3,16 @@ const app = express();
 const http = require("http");
 const server = http.createServer(app);
 const logger = require("morgan");
+const bodyParser = require("body-parser");
+const path = require("path");
+const pug = require("pug");
+
 
 const api = require("./routes/api.js");
+const main = require("./routes/main.js");
+
+app.set("views", "./views");
+app.set("view engine", "pug");
 
 app.use(logger("dev", {
     skip: function (req, res) {
@@ -17,7 +25,11 @@ app.use(logger("dev", {
         return res.statusCode >= 400;
     }, stream: process.stdout
 }));
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
+app.use(express.static(path.join(__dirname, "public")));
 
+app.use("/", main);
 app.use("/api", api);
 
 server.listen(3000);
