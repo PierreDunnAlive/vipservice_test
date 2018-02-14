@@ -5,13 +5,16 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "mysql2": "^1.5.2",
     "request": "^2.83.0",
     "sequelize": "^4.33.4"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node bin/www"
+    "start": "node app",
+    "fill": "node services/db_fill_service"
   },
   "repository": {
     "type": "git",
