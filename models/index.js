@@ -1,6 +1,10 @@
 const Sequelize = require("sequelize");
 const config = require("../config/config.json");
-console.log(config);
+
+if (!config) {
+    throw new Error("Can't find configuration file.");
+}
+
 const sequelize = new Sequelize(config.database, config.username, config.password, config);
 
 const Order = sequelize.define("Order", {
