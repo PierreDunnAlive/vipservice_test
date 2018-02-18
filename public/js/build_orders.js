@@ -16,8 +16,6 @@ xhr.onload = function(){
         orderBlock.appendChild(order);
     });
 
-    //table.innerHTML = JSON.stringify(resp, null, '\n');
-    //orderBlock.appendChild(table);
 }
 
 xhr.open("GET", "/api/orders", true);

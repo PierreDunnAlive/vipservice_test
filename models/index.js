@@ -66,4 +66,6 @@ const db = {
     OrderPassenger: OrderPassenger
 }
 
+Order.hasMany(OrderPassenger, {as: "passengers", foreignKey: "order_id"});
+
 module.exports = db;
